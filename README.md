@@ -1,3 +1,19 @@
+# module2-project-Daquan
+
+## which API I'm using
+https://hp-api.herokuapp.com/
+
+## problem statement
+An app that acts as a one stop shop for Harry potter information, all Harry Potter enthusiasts alike will enjoy
+the opportunity to find everything they want to know about the wizarding world in one place
+
+## target users
+The target users are people who have a passion and deep love for all things Harry Potter, people who want to stay 
+sharp on their wizarding knowledge!
+
+## wireframe
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
