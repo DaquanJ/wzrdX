@@ -45,11 +45,17 @@ BROWSE.JSX
     images, names, descriptions (one set for each category)
     link all elements with a path to category page
 
-CATEGORY.JSX
-
+CATEGORY.JSX 
+    (using match, data here will be rendered dynamically through usage of data id's, elimating the need for multiple pages)
+    import axios
+    establish state with empty array to grab data from api call
+    create an async await componentdidmount function that makes an axios call to api (using try catch)
+    map respected data to approriate elements 
+    h1 for title/name, img for image, p for descriptions
 
 ABOUT.JSX
     add desired image for about to page to respected directory
     import image
     create h1 elements with the text 'what is wzrd x?' and 'why wzrdX?'
     create p tags to add descriptions
+ 
