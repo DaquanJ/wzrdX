@@ -16,6 +16,16 @@ APP.JS
 
 NAV.JSX
     add sorting hat png image to appropriate directory
+    create ul with 2 li elements
     import sorting hat image
-    
+    include image and brows in li elements
+    add hr element
+    link each li with its appropriate path
+
+FOOTER.JSX
+    create ul with 2 li elements
+    include about and copyright line in li elements
+    link appropriate path to about li
+
+
 
