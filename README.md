@@ -12,6 +12,7 @@ The target users are people who have a passion and deep love for all things Harr
 sharp on their wizarding knowledge!
 
 ## wireframe
+![WzrdX wireframe](https://github.com/DaquanJ/wzrdX/blob/master/wireframe/WzrdX-wireframe.jpg "WzrdX")
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
