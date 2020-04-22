@@ -1,0 +1,21 @@
+Order of operations:
+
+APP.JS
+    npm install axios
+    npm install react router
+    import axios
+    establish state with empty array as value to grab data from api and with empty string as value to grab the values read from search input
+    create an async await componentdidmount function that makes an axios call to api (using try catch)
+    create search form 
+    pass anonymous function into search input that grabs value from search bar
+    create function that takes value from search input and renders matching data from api
+    pass that function into the search forms submit button to be called onClick
+    map respected data to categories component 
+    import router modules
+    using browser router as router switch and route , give each component its respected path
+
+NAV.JSX
+    add sorting hat png image to appropriate directory
+    import sorting hat image
+    
+
