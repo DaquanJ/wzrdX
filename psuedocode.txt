@@ -10,7 +10,7 @@ APP.JS
     pass anonymous function into search input that grabs value from search bar
     create function that takes value from search input and renders matching data from api that has been mapped in categories component
     pass that function into the search forms submit button to be called onClick
-    map respected data to categories component 
+    map respected data to categories and browse components
     import router modules
     using browser router as router switch and route , give each component its respected path
 
@@ -36,6 +36,11 @@ FOOTER.JSX
     link appropriate path to about li
     render on all pages
 
-BROWSE.JSX
-     
 
+BROWSE.JSX
+    import link from router
+    create h1 element with text 'the wizarding world'
+    create h2 elements for each data category api provides
+    using mapped api data create respected elements 
+    images, names, descriptions (one set for each category)
+    link all elements with a path to category page
