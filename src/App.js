@@ -12,9 +12,6 @@ class App extends Component {
      }
   }
 
-handleSubmit = (e) => {
-  e.preventDefault()
-}
 componentDidMount = async () => {
   try {
     const response = await axios.get('http://hp-api.herokuapp.com/api/characters')
@@ -25,12 +22,18 @@ componentDidMount = async () => {
   }
 }
 
+handleSubmit = (e) => {
+  e.preventDefault()
+}
+
+
+
   render() { 
     
     return ( 
       <div>
         <form onSubmit={this.handleSubmit} >
-          <input type='search' placeholder='What wizard knowledge do you seek?' />
+          <input type='search' placeholder='What wizard knowledge do you seek?' onChange = {e => (this.setState({search: e.target.value}))} />
           <input type='submit' value='Search' />
         </form>
       </div>
