@@ -15,7 +15,7 @@ class App extends Component {
 
 componentDidMount = async () => {
   try {
-    const response = await axios.get(`https://www.potterapi.com/v1/?key=${apikey}`)
+    const response = await axios.get(`https://www.potterapi.com/v1/characters?key=${apikey}`)
     this.setState({data: response.data})
     console.log(response.data)
   } catch (error) {
