@@ -1,7 +1,7 @@
 # module2-project-Daquan
 
 ## which API I'm using
-https://www.potterapi.com/
+https://hp-api.herokuapp.com/
 
 ## problem statement
 An app that acts as a one stop shop for Harry potter information, all Harry Potter enthusiasts alike will enjoy
