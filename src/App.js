@@ -12,6 +12,17 @@ class App extends Component {
       data: [],
      }
   }
+
+componentDidMount = async () => {
+  try {
+    const response = await axios.get(`https://www.potterapi.com/v1/?key=${apikey}`)
+    this.setState({data: response.data})
+    console.log(response.data)
+  } catch (error) {
+    console.log('Something went wrong!', error)
+  }
+}
+
   render() { 
     
     return ( 
