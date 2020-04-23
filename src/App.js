@@ -34,7 +34,6 @@ handleSearch = () => {
 
 
   render() { 
-    
     return ( 
       <div>
         <form className="search" onSubmit={this.handleSubmit}>
@@ -46,6 +45,10 @@ handleSearch = () => {
   }
 }
 
-/* required att. ensures form is filled out before submission can be made */
+
+/* 
+Search bar html & css - 'transparency' ; https://speckyboy.com/search-field-sexy-css/ (incorporated my own styling)
+required attribute ensures form is filled out before submission can be made 
+*/
  
 export default App;
