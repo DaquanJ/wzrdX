@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import './styles/app.scss'
 
 
 class App extends Component {
@@ -36,13 +37,15 @@ handleSearch = () => {
     
     return ( 
       <div>
-        <form onSubmit={this.handleSubmit} >
-          <input type='search' placeholder='What wizard knowledge do you seek?' onChange = {e => (this.setState({search: e.target.value}))} />
-          <input type='submit' value='Search' onClick={this.handleSearch} />
-        </form>
+        <form className="search" onSubmit={this.handleSubmit}>
+          <input type="search" placeholder="What knowledge do you seek..." onChange={e => (this.setState({search: e.target.value}))} required/>
+          <button type="submit" onClick={this.handleSearch}>Search</button>
+        </form>   
       </div>
      );
   }
 }
+
+/* required att. ensures form is filled out before submission can be made */
  
 export default App;
