@@ -1,0 +1,53 @@
+body {
+    background: url('../assets/HP5.jpeg') no-repeat center center fixed;
+}
+.search {
+    width: 600px;
+    height: 50px;
+    margin: 150px auto;
+    background: #444;
+    background: white;
+    border-radius:  3px;
+    border: 2px solid #fff;
+    
+    input {
+      font-size: 20px;
+      width: 370px;
+      padding: 10px 5px;
+      float: left;
+      color: darkviolet;
+      border: 0;
+      background: transparent;
+      border-radius: 3px 0 0 3px;
+      &:focus {
+        outline: 0;
+        background:transparent;
+      }
+    }
+    
+    button {
+      font-weight: bold;
+      font-size: 25px;
+      position: relative;
+      float: right;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      height: 50px;
+      width: 120px;
+      color: silver;
+      background: transparent;
+      border-left: 2px solid darkviolet;
+      border-radius: 0 3px 3px 0;
+      &:hover {
+        background: #fff;
+        color:darkviolet;
+      }
+      &:active {
+        box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+      }
+      &:focus {
+        outline: 0;
+      }
+    }  
+  }
