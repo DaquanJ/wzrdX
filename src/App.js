@@ -8,7 +8,7 @@ class App extends Component {
     super(props);
     this.state = { 
       data: [],
-      search: [],
+      search: '',
      }
   }
 
@@ -26,7 +26,10 @@ componentDidMount = async () => {
     
     return ( 
       <div>
-
+        <form>
+          <input type='search' placeholder='What wizard knowledge do you seek?' />
+          <input type='submit' value='Search' />
+        </form>
       </div>
      );
   }
