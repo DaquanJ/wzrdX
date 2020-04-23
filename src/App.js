@@ -26,6 +26,10 @@ handleSubmit = (e) => {
   e.preventDefault()
 }
 
+handleSearch = () => {
+  console.log(this.state.search)
+}
+
 
 
   render() { 
@@ -34,7 +38,7 @@ handleSubmit = (e) => {
       <div>
         <form onSubmit={this.handleSubmit} >
           <input type='search' placeholder='What wizard knowledge do you seek?' onChange = {e => (this.setState({search: e.target.value}))} />
-          <input type='submit' value='Search' />
+          <input type='submit' value='Search' onClick={this.handleSearch} />
         </form>
       </div>
      );
