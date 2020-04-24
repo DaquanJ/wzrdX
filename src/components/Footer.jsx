@@ -7,7 +7,7 @@ const Footer = () => {
         <div className='footer' >
             <hr/>
             <ul>
-                <Link to='/about' > <li> About </li> </Link> 
+                <Link to='/about' id='about' > <li> About </li> </Link> 
                 <li> &copy; 2020 WZRDX FROM PERSCHOLAS </li>
             </ul>
         </div>
