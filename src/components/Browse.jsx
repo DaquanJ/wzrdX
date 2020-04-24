@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Browse = () => {
+const Browse = (props) => {
     return ( 
-        <div>
-            <h1> Browse </h1>
+        <div className="card" style={{width: "18rem"}}>
+            <img src={props.image} class="card-img-top" alt="..."/>
+                <div className="card-body">
+                    <h1 className="card-title"> {props.name} </h1>
+                    <a href="" className="btn btn-primary">Go somewhere</a>
+                </div>
         </div>
      );
 }
