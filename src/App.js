@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Categories from './components/Categories';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import Browse from './components/Browse';
+import About from './components/About';
+import Category from './components/Category';
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './styles/app.scss'
@@ -31,12 +34,14 @@ handleSearch = (e) => {
   e.preventDefault()
   const knowledge = this.state.data.filter(info => info === this.state.search.toLowerCase())
   console.log(knowledge)
+  console.log(this.state.search)
 
 }
 
   render() { 
     return ( 
       <div>
+        
         <Nav/>
         <form className="search">
           <input type="search" placeholder="What knowledge do you seek..." onChange={e => (this.setState({search: e.target.value}))} required/>
@@ -44,6 +49,14 @@ handleSearch = (e) => {
         </form>   
         {this.state.data.map(character => (<Categories character={character.name} />))}
         <Footer/>
+        <Router>
+        <Switch>
+        <Route path='/' exact component={App} />
+        <Route path='/browse' component={Browse} />
+        <Route path='/about' component={About} />
+        <Route path='/category' component={Category} />
+        </Switch>
+        </Router>
       </div>
      );
   }
