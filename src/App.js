@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Categories from './components/Categories';
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './styles/app.scss'
@@ -42,6 +43,7 @@ handleSearch = (e) => {
           <button type="submit" onClick={this.handleSearch}>Search</button>
         </form>   
         {this.state.data.map(character => (<Categories character={character.name} />))}
+        <Footer/>
       </div>
      );
   }
