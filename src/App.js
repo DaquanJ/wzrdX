@@ -37,7 +37,10 @@ handleSearch = () => {
   const knowledge = this.state.data.filter(info => info === this.state.search.toLowerCase())
   console.log(knowledge)
   console.log(this.state.search)
+}
 
+handleChange = (e) => {
+  this.setState({search: e.target.value})
 }
 
   render() { 
@@ -45,10 +48,7 @@ handleSearch = () => {
       <div>
         <Router>
         <Nav/>
-        <form className="search" onSubmit={this.handleSubmit} >
-          <input type="search" placeholder="What knowledge do you seek..." onChange={e => (this.setState({search: e.target.value}))} required/>
-          <button type="submit" onClick={this.handleSearch}>Search</button>
-        </form>   
+        <Searchbar data={this.state.data} search={this.state.search} handleSearch={this.handleSearch} handleChange={this.handleChange}  /> 
         {this.state.data.map(character => (<Categories key={character.name} image={character.image} character={character.name} />))}
         {this.state.data.map(browse => (<Browse key={browse.name} image={browse.image} name={browse.name} />))}
         <Switch>
