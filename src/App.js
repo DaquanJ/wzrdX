@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Categories from './components/Categories';
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './styles/app.scss'
@@ -27,11 +28,11 @@ handleSubmit = (e) => {
   e.preventDefault()
 }
 
+
 handleSearch = () => {
-  console.log(this.state.search)
+  const knowledge = this.state.data.filter(info => info === this.state.search.toLowerCase())
+  console.log(knowledge)
 }
-
-
 
   render() { 
     return ( 
@@ -40,6 +41,7 @@ handleSearch = () => {
           <input type="search" placeholder="What knowledge do you seek..." onChange={e => (this.setState({search: e.target.value}))} required/>
           <button type="submit" onClick={this.handleSearch}>Search</button>
         </form>   
+        {this.state.data.map(character => (<Categories character={character.name} />))}
       </div>
      );
   }
