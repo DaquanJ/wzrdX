@@ -1,13 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Browse = (props) => {
     return ( 
-        <div className="card" style={{width: "18rem"}}>
-            <img src={props.image} class="card-img-top" alt="..."/>
-                <div className="card-body">
-                    <h1 className="card-title"> {props.name} </h1>
-                    <a href="" className="btn btn-primary">Go somewhere</a>
-                </div>
+        <div className='browse-card' >
+            <Link to='/category' >
+            <img src={props.image} alt="Wizards and Witches"/>
+            <h1> {props.name} </h1>
+            </Link>
         </div>
      );
 }
