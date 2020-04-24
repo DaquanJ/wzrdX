@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Browse = (props) => {
     return ( 
-        <div className='browse-card' >
-            <Link to={`/category${props.index}`} >
+        <div className='browse-cards' >
+            <Link className='browse-card' to={`/category${props.index}`} >
             <img src={props.image} alt="Wizards and Witches"/>
             <h1> {props.name} </h1>
             </Link>
