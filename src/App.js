@@ -54,7 +54,7 @@ handleSearch = () => {
         <Switch>
         <Route path='/browse' exact component={Browse} />
         <Route path='/about' component={About} />
-        <Route path='/category:index' component={Category} />
+        <Route path='/category:name' component={Category} />
         </Switch>
         <Footer/>
         </Router>
