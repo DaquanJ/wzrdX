@@ -50,7 +50,7 @@ handleSearch = () => {
           <button type="submit" onClick={this.handleSearch}>Search</button>
         </form>   
         {this.state.data.map(character => (<Categories character={character.name} />))}
-        {this.state.data.map(browse => (<Browse image={browse.image} name={browse.name} index={browse.index} />))}
+        {this.state.data.map(browse => (<Browse image={browse.image} name={browse.name} />))}
         <Switch>
         <Route path='/browse' exact component={Browse} />
         <Route path='/about' component={About} />
