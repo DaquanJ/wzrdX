@@ -49,8 +49,8 @@ handleSearch = () => {
           <input type="search" placeholder="What knowledge do you seek..." onChange={e => (this.setState({search: e.target.value}))} required/>
           <button type="submit" onClick={this.handleSearch}>Search</button>
         </form>   
-        {this.state.data.map(character => (<Categories character={character.name} />))}
-        {this.state.data.map(browse => (<Browse image={browse.image} name={browse.name} />))}
+        {this.state.data.map(character => (<Categories key={character.name} image={character.image} character={character.name} />))}
+        {this.state.data.map(browse => (<Browse key={browse.name} image={browse.image} name={browse.name} />))}
         <Switch>
         <Route path='/browse' exact component={Browse} />
         <Route path='/about' component={About} />
