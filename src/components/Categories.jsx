@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Categories = (props) => {
     return ( 
-        <div >
-            <Link to={`/category/${props.character}`} >
+        <div className='categories'>
+            <Link id='categories-link' to={`/category/${props.character}`} >
             <img src={props.image} alt=""/>
             <h1 > {props.character} </h1>
             </Link>
