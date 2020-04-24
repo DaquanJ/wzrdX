@@ -8,7 +8,7 @@ const Nav = () => {
         <div className='nav' >
             <ul>
               <Link to='/' id='home' > <img src={logo} alt=""/> </Link> 
-              <Link to='/browse' > <li> Browse </li> </Link>
+              <Link to='/browse' id='browse' > <li> Browse </li> </Link>
             </ul>
             <hr/>
         </div>
