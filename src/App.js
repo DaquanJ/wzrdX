@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Categories from './components/Categories';
+import Nav from './components/Nav';
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './styles/app.scss'
@@ -35,6 +36,7 @@ handleSearch = (e) => {
   render() { 
     return ( 
       <div>
+        <Nav/>
         <form className="search">
           <input type="search" placeholder="What knowledge do you seek..." onChange={e => (this.setState({search: e.target.value}))} required/>
           <button type="submit" onClick={this.handleSearch}>Search</button>
