@@ -1,0 +1,23 @@
+.nav ul {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 75vw 10vw;
+    align-items: center;
+    margin: 1% 10% 0% 10%;
+    border: solid 2px black;
+}
+    img {
+        width: 3vw;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    hr {
+        display: flex;
+        justify-content: center;
+        width: 90vw;
+        
+        
+    }
