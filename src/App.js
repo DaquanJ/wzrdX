@@ -53,7 +53,8 @@ handleChange = (e) => {
         {this.state.data.map(character => (<Categories key={character.name} image={character.image} character={character.name} />))}
         {this.state.data.map(browse => (<Browse key={browse.name} image={browse.image} name={browse.name} />))}
         <Switch>
-        <Route path='/browse' exact component={Browse} />
+        <Route path='/' exact component={Searchbar} />
+        <Route path='/browse' component={Browse} />
         <Route path='/about' component={About} />
         <Route path='/category:name' component={Category} />
         </Switch>
