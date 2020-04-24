@@ -29,9 +29,11 @@ componentDidMount = async () => {
   }
 }
 
+handleSubmit = (e) => {
+  e.preventDefault();
+}
 
-handleSearch = (e) => {
-  e.preventDefault()
+handleSearch = () => {
   const knowledge = this.state.data.filter(info => info === this.state.search.toLowerCase())
   console.log(knowledge)
   console.log(this.state.search)
@@ -43,7 +45,7 @@ handleSearch = (e) => {
       <div>
         <Router>
         <Nav/>
-        <form className="search">
+        <form className="search" onSubmit={this.handleSubmit} >
           <input type="search" placeholder="What knowledge do you seek..." onChange={e => (this.setState({search: e.target.value}))} required/>
           <button type="submit" onClick={this.handleSearch}>Search</button>
         </form>   
