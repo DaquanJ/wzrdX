@@ -41,7 +41,7 @@ handleSearch = (e) => {
   render() { 
     return ( 
       <div>
-        
+        <Router>
         <Nav/>
         <form className="search">
           <input type="search" placeholder="What knowledge do you seek..." onChange={e => (this.setState({search: e.target.value}))} required/>
@@ -49,9 +49,7 @@ handleSearch = (e) => {
         </form>   
         {this.state.data.map(character => (<Categories character={character.name} />))}
         <Footer/>
-        <Router>
         <Switch>
-        <Route path='/' exact component={App} />
         <Route path='/browse' component={Browse} />
         <Route path='/about' component={About} />
         <Route path='/category' component={Category} />
