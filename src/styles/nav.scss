@@ -3,24 +3,23 @@
     justify-content: center;
 }
 
-    ul {
+   .nav ul {
         display: grid;
-        grid-template-columns: 75vw 10vw;
+        grid-template-columns: 60vw 10vw;
         align-items: center;
         margin: .4% ;
         
     }
-    img {
+   .nav img {
         width: 3vw;
         
     }
 
-    li {
+   .nav li {
         list-style: none;
-
     }
 
-    hr {
+   .nav hr {
         display: flex;
         justify-content: center;
         width: 90vw;
