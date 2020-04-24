@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Browse from './components/Browse';
 import About from './components/About';
 import Category from './components/Category';
+import Searchbar from './components/Searchbar';
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './styles/app.scss'
