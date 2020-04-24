@@ -48,12 +48,12 @@ handleSearch = (e) => {
           <button type="submit" onClick={this.handleSearch}>Search</button>
         </form>   
         {this.state.data.map(character => (<Categories character={character.name} />))}
-        <Footer/>
         <Switch>
         <Route path='/browse' component={Browse} />
         <Route path='/about' component={About} />
         <Route path='/category' component={Category} />
         </Switch>
+        <Footer/>
         </Router>
       </div>
      );
