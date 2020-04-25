@@ -1,10 +1,17 @@
 import React from 'react';
-import aboutPic from '../assets/aboutpic1.jpg';
+import aboutPic from '../assets/aboutpic2.jpg';
+import '../styles/about.scss';
 
 const About = () => {
     return ( 
-        <div>
+        <div className='about-page' >
             <img src={aboutPic} alt="about page picture"/>
+            <div className='what-why' >
+            <h1> What is wzrdX? </h1>
+            <p> WzrdX is </p>
+            <h1>Why wzrdX?</h1>
+            <p>because...</p>
+            </div>
         </div>
      );
 }
