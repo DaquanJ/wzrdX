@@ -31,7 +31,7 @@ componentDidMount = async () => {
 }
 
 handleSearch = () => {
-  const knowledge = this.state.data.filter(info => info === this.state.search.toLowerCase())
+  const knowledge = this.state.data.filter(info => info.name.toLowerCase() === this.state.search.toLowerCase() || info.house.toLowerCase() === this.state.search.toLowerCase())
   console.log(knowledge)
   console.log(this.state.search)
 }
