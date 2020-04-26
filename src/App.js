@@ -30,14 +30,16 @@ componentDidMount = async () => {
   }
 }
 
-
-
 handleChange = (e) => {
   this.setState({search: e.target.value})
 }
 
   render() { 
     const handleSearch = () => {
+      if (this.state.search === '') {
+        return null;
+        // some data have empty strings as values, added this checker to avoid unwarranted renders
+      } 
       return (
         this.state.data.filter(
         info => info.name.toLowerCase() === this.state.search.toLowerCase() || info.house.toLowerCase() === this.state.search.toLowerCase())
@@ -69,6 +71,7 @@ handleChange = (e) => {
 /* 
 Search bar html & css - 'transparency' ; https://speckyboy.com/search-field-sexy-css/ (incorporated my own styling)
 required attribute ensures form is filled out before submission can be made 
+using .map with .filter - 'referenced the bottom response (qwermike)' ; https://stackoverflow.com/questions/53040288/filter-function-with-ternary
 */
  
 export default App;
