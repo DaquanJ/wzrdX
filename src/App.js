@@ -41,7 +41,6 @@ handleChange = (e) => {
 }
 
   render() { 
-    let {isSearched} = this.state.search;
     return ( 
       <div>
         <Router>
