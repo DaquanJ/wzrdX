@@ -31,9 +31,9 @@ componentDidMount = async () => {
 }
 
 handleSearch = () => {
-  const knowledge = this.state.data.filter(info => info.name.toLowerCase() === this.state.search.toLowerCase() || info.house.toLowerCase() === this.state.search.toLowerCase())
-  console.log(knowledge)
-  console.log(this.state.search)
+    this.state.data.filter(
+    info => info.name.toLowerCase() === this.state.search.toLowerCase() || info.house.toLowerCase() === this.state.search.toLowerCase())
+    .map(info => (<Categories key={info.name} image={info.image} character={info.name} />)) 
 }
 
 handleChange = (e) => {
@@ -41,13 +41,15 @@ handleChange = (e) => {
 }
 
   render() { 
+    let {isSearched} = this.state.search;
     return ( 
       <div>
         <Router>
         <Nav/>
         <Searchbar data={this.state.data} search={this.state.search} handleSearch={this.handleSearch} handleChange={this.handleChange}  /> 
-        {this.state.data.map(character => (<Categories key={character.name} image={character.image} character={character.name} />))}
-        {this.state.data.map(browse => (<Browse key={browse.name} image={browse.image} name={browse.name} />))}
+        <p id='knowledge' > </p>
+        {/* {this.state.data.map(character => (<Categories key={character.name} image={character.image} character={character.name} />))} */}
+        {/* {this.state.data.map(browse => (<Browse key={browse.name} image={browse.image} name={browse.name} />))} */}
         <Switch>
         <Route path='/browse' component={Browse} />
         <Route path='/about' component={About} />
