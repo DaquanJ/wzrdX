@@ -5,7 +5,7 @@ import '../styles/about.scss';
 const About = () => {
     return ( 
         <div className='about-page' >
-            <img src={aboutPic} alt="about page picture"/>
+            <img src={aboutPic} alt="hogwarts school"/>
             <div className='what-why' >
             <h1> What is wzrdX? </h1>
             <p> WzrdX is </p>
