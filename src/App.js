@@ -52,8 +52,6 @@ handleChange = (e) => {
         <Nav/>
         <Searchbar data={this.state.data} search={this.state.search} handleSearch={this.handleSearch} handleChange={this.handleChange}  /> 
         {handleSearch()}
-
-        {/* {this.state.data.map(character => (<Categories key={character.name} image={character.image} character={character.name} />))} */}
         {/* {this.state.data.map(browse => (<Browse key={browse.name} image={browse.image} name={browse.name} />))} */}
         <Switch>
         <Route path='/browse' component={Browse} />
