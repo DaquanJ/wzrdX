@@ -17,6 +17,7 @@ class App extends Component {
     this.state = { 
       data: [],
       search: '',
+      clicked: false,
      }
   }
 
@@ -36,7 +37,7 @@ handleChange = (e) => {
 
   render() { 
     const handleSearch = () => {
-      if (this.state.search === '') {
+      if (this.state.search === '' || this.state.clicked === false) {
         return null;
         // some data have empty strings as values, added this checker to avoid unwarranted renders
       } 
@@ -46,11 +47,19 @@ handleChange = (e) => {
         .map(info => (<Categories key={info.name} image={info.image} character={info.name} />)) 
       )
   }
+
+  const returnSearch = () => {
+    if (this.state.clicked === false) {
+      this.setState({clicked: true})
+    } else {
+      this.setState({clicked: false}) 
+    }
+  }
     return ( 
       <div>
         <Router>
         <Nav/>
-        <Searchbar data={this.state.data} search={this.state.search} handleSearch={this.handleSearch} handleChange={this.handleChange}  /> 
+        <Searchbar data={this.state.data} search={this.state.search} handleSearch={() => returnSearch()} handleChange={this.handleChange}  /> 
         {handleSearch()}
         {/* {this.state.data.map(browse => (<Browse key={browse.name} image={browse.image} name={browse.name} />))} */}
         <Switch>
