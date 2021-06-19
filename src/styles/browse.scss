@@ -1,0 +1,29 @@
+.browse-cards {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 25%);
+    padding: 1%;
+    column-gap: 15%;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+}
+
+.browse-cards img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: .5%;
+    box-shadow: .3px .3px 1px .3px darkgray
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 50% 55%;
+    width: 155%;
+    font-weight: bold;
+    color: purple;
+    opacity: 70%;
+    border-radius: 2%;
+    background-color: white;
+}

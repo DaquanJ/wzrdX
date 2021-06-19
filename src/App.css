@@ -1,1 +1,16 @@
+* {
+    margin: auto;
+    width: 95%;
+    background: url('./assets/HP5.jpeg') no-repeat center center fixed;
+}
 
+body {
+    width: 100%;
+    margin-top: auto;
+}
+
+@media (min-width: 1400px) {
+    * {
+        width: 90%;
+    }
+}

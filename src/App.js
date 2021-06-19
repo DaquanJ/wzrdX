@@ -1,84 +1,35 @@
-import React, { Component } from 'react';
-import Categories from './components/Categories';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Browse from './components/Browse';
 import About from './components/About';
-import Category from './components/Category';
 import Searchbar from './components/Searchbar';
-import axios from 'axios';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './styles/app.scss'
+import './App.css';
 
-
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { 
-      data: [],
-      search: '',
-      clicked: false,
-     }
-  }
-
-componentDidMount = async () => {
-  try {
-    const response = await axios.get('http://hp-api.herokuapp.com/api/characters')
-    this.setState({data: response.data})
-    console.log(response.data)
-  } catch (error) {
-    console.log('Something went wrong!', error)
-  }
-}
-
-handleChange = (e) => {
-  this.setState({search: e.target.value})
-}
-
-  render() { 
-    const handleSearch = () => {
-      if (this.state.search === '' || this.state.clicked === false) {
-        return null;
-        // some data have empty strings as values, added this checker to avoid unwarranted renders
-      } 
-      return (
-        this.state.data.filter(
-        info => info.name.toLowerCase() === this.state.search.toLowerCase() || info.house.toLowerCase() === this.state.search.toLowerCase())
-        .map(info => (<Categories key={info.name} image={info.image} character={info.name} />)) 
-      )
-  }
-
-  const returnSearch = () => {
-    if (this.state.clicked === false) {
-      this.setState({clicked: true})
-    } else {
-      this.setState({clicked: false}) 
-    }
-  }
-    return ( 
-      <div>
-        <Router>
-        <Nav/>
-        <Searchbar data={this.state.data} search={this.state.search} handleSearch={() => returnSearch()} handleChange={this.handleChange}  /> 
-        {handleSearch()}
-        {/* {this.state.data.map(browse => (<Browse key={browse.name} image={browse.image} name={browse.name} />))} */}
+const App = () => {
+  return (
+    <div>
+      <Router>
+        <Nav />
         <Switch>
-        <Route path='/browse' component={Browse} />
-        <Route path='/about' component={About} />
-        <Route path='/category:name' component={Category} />
+          <Route exact path='/' component={Browse} />
+          <Route path='/search' component={Searchbar} />
+          <Route path='/about' component={About} />
         </Switch>
-        <Footer/>
-        </Router>
-      </div>
-     );
-  }
+        <Footer />
+      </Router>
+    </div>
+  );
 }
 
+export default App;
 
-/* 
+
+
+/*
 Search bar html & css - 'transparency' ; https://speckyboy.com/search-field-sexy-css/ (incorporated my own styling)
-required attribute ensures form is filled out before submission can be made 
+required attribute ensures form is filled out before submission can be made
 using .map with .filter - 'referenced the bottom response (qwermike)' ; https://stackoverflow.com/questions/53040288/filter-function-with-ternary
 */
- 
-export default App;
+

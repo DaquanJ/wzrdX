@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 import '../styles/footer.scss'
 
 const Footer = () => {
-    return ( 
+    return (
         <div className='footer' >
-            <hr/>
+            <hr />
             <ul>
-                <Link to='/about' id='about' > <li> About </li> </Link> 
+                <Link to='/about' id='about' > <li> About </li> </Link>
                 <li> &copy; 2020 WZRDX FROM PERSCHOLAS </li>
             </ul>
         </div>
-     );
+    );
 }
- 
+
 export default Footer;
