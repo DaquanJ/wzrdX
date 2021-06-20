@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/wzrdX/static/css/main.20d7f43c.chunk.css",
+    "main.js": "/wzrdX/static/js/main.51d631eb.chunk.js",
+    "main.js.map": "/wzrdX/static/js/main.51d631eb.chunk.js.map",
+    "runtime-main.js": "/wzrdX/static/js/runtime-main.f24eaee9.js",
+    "runtime-main.js.map": "/wzrdX/static/js/runtime-main.f24eaee9.js.map",
+    "static/css/2.69121389.chunk.css": "/wzrdX/static/css/2.69121389.chunk.css",
+    "static/js/2.49d32ea4.chunk.js": "/wzrdX/static/js/2.49d32ea4.chunk.js",
+    "static/js/2.49d32ea4.chunk.js.map": "/wzrdX/static/js/2.49d32ea4.chunk.js.map",
+    "index.html": "/wzrdX/index.html",
+    "precache-manifest.97d865db78f370d56c25f9b98a2e2a41.js": "/wzrdX/precache-manifest.97d865db78f370d56c25f9b98a2e2a41.js",
+    "service-worker.js": "/wzrdX/service-worker.js",
+    "static/css/2.69121389.chunk.css.map": "/wzrdX/static/css/2.69121389.chunk.css.map",
+    "static/css/main.20d7f43c.chunk.css.map": "/wzrdX/static/css/main.20d7f43c.chunk.css.map",
+    "static/js/2.49d32ea4.chunk.js.LICENSE.txt": "/wzrdX/static/js/2.49d32ea4.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/wzrdX/static/media/HP5.d3ebc508.jpeg",
+    "static/media/aboutpic2.jpg": "/wzrdX/static/media/aboutpic2.e755d328.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f24eaee9.js",
+    "static/css/2.69121389.chunk.css",
+    "static/js/2.49d32ea4.chunk.js",
+    "static/css/main.20d7f43c.chunk.css",
+    "static/js/main.51d631eb.chunk.js"
+  ]
+}
