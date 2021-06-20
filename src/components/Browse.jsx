@@ -12,7 +12,7 @@ const Browse = () => {
 
     const getCharacters = async () => {
         try {
-            const response = await axios.get('http://hp-api.herokuapp.com/api/characters')
+            const response = await axios.get('https://hp-api.herokuapp.com/api/characters')
             setBrowse(response.data)
             console.log(response.data)
         } catch (error) {
