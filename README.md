@@ -1,5 +1,8 @@
 # module2-project-Daquan
 
+# Deployed App
+
+"https://DaquanJ.github.io/wxrdX"
 ## which API I'm using
 https://hp-api.herokuapp.com/
 
