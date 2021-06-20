@@ -2,7 +2,7 @@
 
 # Deployed App
 
-"https://DaquanJ.github.io/wxrdX"
+https://DaquanJ.github.io/wzrdX
 ## which API I'm using
 https://hp-api.herokuapp.com/
 
