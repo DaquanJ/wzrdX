@@ -2,7 +2,7 @@
   "name": "wzrd-rolodex",
   "version": "0.1.0",
   "private": true,
-  "Homepage": "https://DaquanJ.github.io/wxrdX",
+  "homepage": "https://DaquanJ.github.io/wxrdX",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -21,8 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "Predeploy": "num run build",
-    "Deploy": "gh-pages -d build",
+    "predeploy": "num run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
